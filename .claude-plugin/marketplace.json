@@ -2,13 +2,22 @@
   "name": "marimo-claude",
   "owner": {
     "name": "synapticore-io",
-    "url": "https://github.com/synapticore-io"
+    "email": "bjoern@synapticore.io"
+  },
+  "metadata": {
+    "description": "MCP server bridging Marimo notebooks and Claude",
+    "version": "0.1.0"
   },
   "plugins": [
     {
       "name": "marimo-claude",
       "description": "MCP server bridging Marimo notebooks and Claude — edit, inspect, and visualize notebooks collaboratively",
-      "source": ".",
+      "source": {
+        "source": "github",
+        "repo": "synapticore-io/marimo-claude",
+        "ref": "main",
+        "sha": "35f4150f6dce3c89c60bdd35527fa66cf61b821e"
+      },
       "homepage": "https://github.com/synapticore-io/marimo-claude"
     }
   ]

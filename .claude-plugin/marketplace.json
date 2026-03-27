@@ -1,0 +1,15 @@
+{
+  "name": "marimo-claude",
+  "owner": {
+    "name": "synapticore-io",
+    "url": "https://github.com/synapticore-io"
+  },
+  "plugins": [
+    {
+      "name": "marimo-claude",
+      "description": "MCP server bridging Marimo notebooks and Claude — edit, inspect, and visualize notebooks collaboratively",
+      "source": ".",
+      "homepage": "https://github.com/synapticore-io/marimo-claude"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Research docs (not shipped)
+docs/
+
+# Plugin local settings
+.claude/*.local.md

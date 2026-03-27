@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "marimo-claude": {
+      "command": "uv",
+      "args": [
+        "--directory", "${CLAUDE_PLUGIN_ROOT}",
+        "run", "marimo-claude"
+      ]
+    }
+  }
+}

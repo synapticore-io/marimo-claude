@@ -1,0 +1,8 @@
+{
+  "name": "marimo-claude",
+  "version": "0.1.0",
+  "description": "Collaborative Marimo notebook editing with Claude — inspect, edit, and visualize notebooks via MCP",
+  "author": {
+    "name": "Bjoern Bethge"
+  }
+}

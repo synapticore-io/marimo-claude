@@ -3,7 +3,7 @@ name = "marimo-claude"
 version = "0.1.0"
 description = "MCP server bridging Marimo notebooks and Claude — edit, inspect, and visualize notebooks collaboratively"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 license = "MIT"
 authors = [{ name = "Bjoern Bethge" }]
 keywords = ["marimo", "claude", "mcp", "notebook", "ai"]
@@ -12,7 +12,8 @@ classifiers = [
     "Intended Audience :: Developers",
     "Topic :: Scientific/Engineering",
     "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
     "marimo[mcp,recommended]>=0.21.1",

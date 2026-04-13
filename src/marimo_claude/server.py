@@ -11,6 +11,7 @@ from typing import Any
 from mcp.server.fastmcp import FastMCP
 from mcp_ui_server import create_ui_resource
 from mcp_ui_server.core import UIResource
+from mcp_ui_server.types import UIMetadataKey
 
 from marimo_claude.bridge import MarimoBridge
 from marimo_claude.process import MarimoProcess
@@ -98,17 +99,26 @@ async def show_notebook() -> list[UIResource]:
     Requires Marimo to be running (call start_marimo first).
     """
     if not _process.running:
-        raise RuntimeError("Marimo is not running. Call start_marimo first.")
+        error_html = (
+            "<div style='font-family:sans-serif;padding:2rem;color:#c0392b'>"
+            "<h2>Marimo not running</h2>"
+            "<p>Call <code>start_marimo</code> first to launch a notebook.</p>"
+            "</div>"
+        )
+        return [create_ui_resource({
+            "uri": "ui://marimo-claude/error",
+            "content": {"type": "rawHtml", "htmlString": error_html},
+            "encoding": "text",
+        })]
 
-    ui_resource = create_ui_resource({
+    return [create_ui_resource({
         "uri": "ui://marimo-claude/notebook",
-        "content": {
-            "type": "externalUrl",
-            "iframeUrl": _process.url,
-        },
+        "content": {"type": "externalUrl", "iframeUrl": _process.url},
         "encoding": "text",
-    })
-    return [ui_resource]
+        "uiMetadata": {
+            UIMetadataKey.PREFERRED_FRAME_SIZE: ["100%", "80vh"],
+        },
+    })]
 
 
 # ---------------------------------------------------------------------------

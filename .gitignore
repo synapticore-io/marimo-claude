@@ -14,3 +14,6 @@ docs/
 
 # Plugin local settings
 .claude/*.local.md
+
+# Claude Code internal state
+.claude/scheduled_tasks.lock

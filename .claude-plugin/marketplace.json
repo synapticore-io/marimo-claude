@@ -15,8 +15,7 @@
       "source": {
         "source": "github",
         "repo": "synapticore-io/marimo-claude",
-        "ref": "main",
-        "sha": "35f4150f6dce3c89c60bdd35527fa66cf61b821e"
+        "ref": "main"
       },
       "homepage": "https://github.com/synapticore-io/marimo-claude"
     }

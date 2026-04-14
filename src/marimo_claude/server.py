@@ -111,9 +111,15 @@ async def show_notebook() -> list[UIResource]:
             "encoding": "text",
         })]
 
+    iframe_html = (
+        f'<iframe src="{_process.url}" '
+        'style="width:100%;height:80vh;border:none;" '
+        'allow="clipboard-read; clipboard-write">'
+        "</iframe>"
+    )
     return [create_ui_resource({
         "uri": "ui://marimo-claude/notebook",
-        "content": {"type": "externalUrl", "iframeUrl": _process.url},
+        "content": {"type": "rawHtml", "htmlString": iframe_html},
         "encoding": "text",
         "uiMetadata": {
             UIMetadataKey.PREFERRED_FRAME_SIZE: ["100%", "80vh"],
